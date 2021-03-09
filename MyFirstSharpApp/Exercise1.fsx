@@ -1,11 +1,14 @@
-﻿open System.IO
+﻿//The goal of this exercise is to
+// - Count the number of words in a string
+// - Write the result and the initial sentence in a file.
 
-let countWords (text:string) =
-    let array = text.Split ' '
-    array.Length.ToString()
+open System.IO
+
+let countWords (text: string) =
+    text.Split ' ' |> Array.length
 
 let WriteIntoFile text nbWords =
-    File.WriteAllText(".\\test", "text = " + text + " | nbWords = " + nbWords)
+    File.WriteAllText(".\\test", "text = " + text + " | nbWords = " + nbWords.ToString ())
 
-let text = "Cette phrase fait 5 mots"
+let text = "This is a test sentence."
 countWords text |> WriteIntoFile text

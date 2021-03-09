@@ -1,18 +1,21 @@
-﻿open System
+﻿//The goal of this exercise is to fetch the data of a browser page with a given URL and display it in a WinForm
+
+open System
 open System.Net
 open System.Windows.Forms
 
 let createForm uri =
     let fsharpOrg =
-                let webClient = new WebClient()
-                webClient.DownloadString(Uri uri)
+        use webClient = new WebClient()
+        webClient.DownloadString(Uri uri)
 
-    let browser =
-        new WebBrowser(ScriptErrorsSuppressed = true,
-            Dock = DockStyle.Fill,
-            DocumentText = fsharpOrg)
+    use browser =
+        new WebBrowser
+            (ScriptErrorsSuppressed = true
+            , Dock = DockStyle.Fill
+            , DocumentText = fsharpOrg)
 
-    let form = new Form(Text = "Hello from F#!")
+    use form = new Form(Text = "Hello from F#!")
 
     form.Controls.Add browser
     form.Show()

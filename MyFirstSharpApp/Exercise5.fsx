@@ -1,4 +1,6 @@
-﻿let drive(petrol, distance) =
+﻿//The goal of this exercise is to learn about tuples and immutable variables, even if, in this case, it is simple to implement without a tuple
+
+let drive(petrol, distance) =
     if distance > 50 then petrol / 2.0
     elif distance > 25 then petrol - 10.0
     elif distance > 0 then petrol - 1.0
