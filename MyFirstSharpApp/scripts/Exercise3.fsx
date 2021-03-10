@@ -11,9 +11,9 @@ let createForm uri =
 
     use browser =
         new WebBrowser
-            (ScriptErrorsSuppressed = true
+            ( ScriptErrorsSuppressed = true
             , Dock = DockStyle.Fill
-            , DocumentText = fsharpOrg)
+            , DocumentText = fsharpOrg )
 
     use form = new Form(Text = "Hello from F#!")
 
