@@ -1,20 +1,23 @@
-﻿// The goal of this exercise is to
+﻿// The goal of this exercise is to work with .net dependency (here, WebClient)
 
 open System.Net
 
-let postUsername (client: WebClient) name =
-    client.UploadString ("https://httpbin.org/post", "fname=" + name);
+let postUsername name (client: WebClient) =
+    let res = client.UploadString ("https://httpbin.org/post", "fname=" + name)
+    //Do stuff with result
+    client
 
-let postAge (client: WebClient) age =
-    client.UploadString ("https://httpbin.org/post", "age=" + age)
+let postAge age (client: WebClient) =
+    let res = client.UploadString ("https://httpbin.org/post", "age=" + age)
+    //Do stuff with result
+    client
 
 let postInformations name age =
-    // Can't use 'use' keyword outside of a function
     use client = new WebClient ()
-    // <- used to modify value after init
     client.Encoding <- System.Text.Encoding.UTF8;
 
-    postUsername client name |> ignore
-    postAge  client age
+    client
+    |> postUsername name
+    |> postAge  age
 
 postInformations "flavien" "24"
