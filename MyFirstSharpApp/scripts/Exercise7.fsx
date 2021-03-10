@@ -1,4 +1,6 @@
-﻿type Car =
+﻿// The goal of this exercise is simply to learn how to create records and init them.
+
+type Car =
     {
         Manufacturer : string
         EngineSize : string

@@ -1,4 +1,7 @@
-﻿open System.IO
+﻿// The goal of this exercise is to learn how to 'silently' pass parameters through functions
+// to a function expecting a specific set of parameters
+
+open System.IO
 open System
 
 let writeToFile (date: DateTime) filename text =
