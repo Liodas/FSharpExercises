@@ -6,13 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="scratchpad4.fsx" />
-    <None Include="scratchpad3.fsx" />
-    <None Include="scratchpad2.fsx" />
-    <None Include="scratchpad.fsx" />
+    <None Include="scripts\Exercise10fsx.fsx" />
+    <None Include="scripts\Exercise9.fsx" />
+    <None Include="scripts\Exercise8.fsx" />
+    <None Include="scripts\Exercise7.fsx" />
+    <Compile Include="scripts\Exercise6.fsx" />
+    <None Include="scripts\Exercise5.fsx" />
+    <None Include="scripts\Exercise4.fsx" />
+    <None Include="scripts\Exercise3.fsx" />
+    <None Include="scripts\Exercise2.fsx" />
+    <None Include="scripts\Exercise1.fsx" />
+    <None Include="scripts\test.fsx" />
+    <Compile Include="Domain.fs" />
+    <Compile Include="Operations.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
-  <ItemGroup />
 
 </Project>
