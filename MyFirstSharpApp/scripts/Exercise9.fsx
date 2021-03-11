@@ -4,10 +4,7 @@
 open System
 open System.IO
 
-type Customer =
-    {
-        Age : int
-    }
+type Customer = { Age: int }
 
 let printCustomerAge writer customer =
     if customer.Age < 13 then

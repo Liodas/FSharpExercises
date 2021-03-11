@@ -1,6 +1,6 @@
 ﻿namespace Domain
 
 type Customer =
-    { FirstName : string
+    { FirstName: string
       LastName : string
       Age : int }
