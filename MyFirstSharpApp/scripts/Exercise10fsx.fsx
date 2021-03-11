@@ -13,8 +13,7 @@ let postAge age (client: WebClient) =
     client
 
 let postInformations name age =
-    use client = new WebClient ()
-    client.Encoding <- System.Text.Encoding.UTF8;
+    use client = new WebClient (Encoding = System.Text.Encoding.UTF8)
 
     client
     |> postUsername name
