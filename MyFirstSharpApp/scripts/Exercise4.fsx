@@ -1,4 +1,4 @@
-// The goal of this exercise is to learn about inner functions
+﻿//The goal of this exercise is to learn about inner functions
 
 let sayHello someValue  =
     let innerFunction number =

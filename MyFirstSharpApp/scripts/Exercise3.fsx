@@ -1,4 +1,4 @@
-// The goal of this exercise is to fetch the data of a browser page with a given URL and display it in a WinForm
+﻿//The goal of this exercise is to fetch the data of a browser page with a given URL and display it in a WinForm
 
 open System
 open System.Net

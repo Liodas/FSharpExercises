@@ -1,4 +1,4 @@
-// The goal of this exercise is to
+﻿//The goal of this exercise is to
 // - Count the number of words in a string
 // - Write the result and the initial sentence in a file.
 

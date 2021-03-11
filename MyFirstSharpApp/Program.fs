@@ -1,18 +1,13 @@
-﻿open System
-open System.IO
-
-
-let countWords (text:string) =
-    let array = text.Split ' '
-    array.Length.ToString()
-
-let WriteIntoFile text nbWords =
-    File.WriteAllText(".\\test", "text = " + text + " | nbWords = " + nbWords)
+﻿open Domain
+open Operations
 
 [<EntryPoint>]
 let main argv =
-    let text = "This is a test string."
-    countWords text |> WriteIntoFile text
-    Console.ReadKey() |> ignore
-    0 // return an integer exit code
+    let customer = { FirstName = "Flavien"; LastName = "Sellet" ; Age = 24 }
 
+    if customer |> isOlderThan 18 then
+        printf "%s %s is an adult" customer.FirstName customer.LastName
+    else
+        printf "%s %s is a child" customer.FirstName customer.LastName
+
+    0
